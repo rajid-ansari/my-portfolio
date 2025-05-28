@@ -1,5 +1,5 @@
 import resume from "../assets/resume.pdf"
-import logo from "../assets/images/logo.png"
+import logo from "/logo.png"
 
 const Navbar = () => {
 	return (

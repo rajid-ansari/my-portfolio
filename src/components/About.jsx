@@ -20,7 +20,6 @@ const About = () => {
                 start: "top 100%",
                 end: "top 90%",
                 scrub: 2,
-                // markers: true,
             },
         });
         gsap.from(aboutRef.current, {
@@ -33,7 +32,6 @@ const About = () => {
                 start: "top 35%",
                 end: "top 26%",
                 scrub: 2,
-                // markers: true,
             },
         })
     });

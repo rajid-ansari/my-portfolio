@@ -1,7 +1,6 @@
 import heroPic from "../assets/images/hero_pic.jpg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { motion } from "motion/react";
 import Navbar from "./Navbar";
 
 gsap.registerPlugin(useGSAP);
@@ -38,12 +37,12 @@ const Hero = () => {
 
                 <div className="box w-full overflow-hidden mt-2 h-full">
                     {heroText.map((letter, index) => (
-                        <motion.span
+                        <span
                             key={index}
                             className="char text-5xl md:text-8xl sm:text-6xl lg:text-9xl font-bold text-center tracking-tight leading-none font-bebas hover:text-primary transition-all duration-300"
                         >
                             {letter}
-                        </motion.span>
+                        </span>
                     ))}
                 </div>
 

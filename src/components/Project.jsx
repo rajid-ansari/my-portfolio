@@ -40,15 +40,28 @@ const Project = () => {
             serial: 1,
             title: "TrackWise",
             about: `TrackWise is a smart expense tracker that helps users manage daily finances by categorizing xpenses. <br /> Built with <strong>React.js</strong>, <strong>Tailwind CSS</strong>, and <strong>Firebase</strong>, it supports real-time data sync, authentication, and <br /> <strong>PWA</strong> installability, making it usable as a mobile app.`,
-            link: "https://trackwisee.vercel.app",
-            btnText: "See Live",
+            liveLink: "https://trackwisee.vercel.app",
+            codeLink: "https://github.com/rajid-ansari/trackwise",
+            live: "See Live",
+            code: "See Code",
         },
         {
             serial: 2,
             title: "PicWash",
             about: `PicWash is a Image Enhancer tool that lets users upload and enhance images with real-time preview<br /> and download options. Built with <strong>React.js</strong> and <strong>Tailwind CSS</strong>, it offers a clean and responsive<br /> interface for seamless user experience.`,
-            link: "https://github.com/rajid-ansari/image-enhancer",
-            btnText: "See Code",
+            liveLink: "https://picwash.vercel.app",
+            codeLink: "https://github.com/rajid-ansari/image-enhancer",
+            live: "See Live",
+            code: "See Code",
+        },
+        {
+            serial: 3,
+            title: "Tape Search",
+            about: `Built a responsive movie search app with <strong>debounced search</strong> functionality to optimize API performance and reduce unnecessary requests. Integrated <strong>TMDB API</strong> to fetch real-time movie data. Utilized <strong>Appwrite</strong> backend services for storing trending searches and tracking user interest analytics.`,
+            liveLink: "https://tape-search.vercel.app",
+            codeLink: "https://github.com/rajid-ansari/tape-search",
+            live: "See Live",
+            code: "See Code",
         },
     ];
 
@@ -66,7 +79,7 @@ const Project = () => {
             {/* project link */}
             <div className="lg:mt-12 mt-20  lg:mb-4">
                 {/* project layout starts here */}
-                {projects.map((project) => (
+                {projects.reverse().map((project) => (
                     <div
                         key={project.serial}
                         className="project lg:h-32 w-full flex lg:flex-row flex-col lg:items-center items-start justify-between px-5 lg:mb-4 border-b-[1px] pb-3 lg:mt-16 mt-4"
@@ -93,10 +106,16 @@ const Project = () => {
                         {/* btn component */}
                         <div className="pl-8 lg:pl-0 ">
                             <AnchorLink
-                                className="tracking-tight"
-                                link={project.link}
+                                className="tracking-tight mb-2"
+                                link={project.liveLink}
                             >
-                                {project.btnText}
+                                {project.live}
+                            </AnchorLink>
+                            <AnchorLink
+                                className="tracking-tight"
+                                link={project.codeLink}
+                            >
+                                {project.code}
                             </AnchorLink>
                         </div>
                     </div>

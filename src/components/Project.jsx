@@ -79,7 +79,7 @@ const Project = () => {
             {/* project link */}
             <div className="lg:mt-12 mt-20  lg:mb-4">
                 {/* project layout starts here */}
-                {projects.reverse().map((project) => (
+                {projects.reverse().map((project, index) => (
                     <div
                         key={project.serial}
                         className="project lg:h-32 w-full flex lg:flex-row flex-col lg:items-center items-start justify-between px-5 lg:mb-4 border-b-[1px] pb-3 lg:mt-16 mt-4"
@@ -87,7 +87,7 @@ const Project = () => {
                         <div className="flex">
                             <div>
                                 <h1 className="lg:text-8xl text-4xl font-sans tracking-tighter leading-none lg:mr-9 mr-3 ">
-                                    {project.serial}.
+                                    {index + 1}.
                                 </h1>
                             </div>
 
